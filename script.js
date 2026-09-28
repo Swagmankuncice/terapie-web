@@ -104,25 +104,22 @@ document.addEventListener('DOMContentLoaded', () => {
       e.preventDefault();
       let hasError = false;
 
-      // Validace jména
+      // Validace jména / přezdívky
       if (!nameInput.value.trim()) {
-        if (errorName) errorName.textContent = 'Prosím, uveďte své jméno.';
+        if (errorName) errorName.textContent = 'Prosím, uveďte své jméno nebo přezdívku.';
         hasError = true;
       }
 
-      // Validace e-mailu
-      const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-      if (!emailInput.value.trim()) {
-        if (errorEmail) errorEmail.textContent = 'Prosím, vyplňte svůj e-mail.';
-        hasError = true;
-      } else if (!emailRegex.test(emailInput.value.trim())) {
-        if (errorEmail) errorEmail.textContent = 'Zadejte platnou e-mailovou adresu.';
+      // Validace kontaktu (Signal nick, ProtonMail nebo e-mail)
+      const contactVal = emailInput.value.trim();
+      if (!contactVal) {
+        if (errorEmail) errorEmail.textContent = 'Prosím, uveďte kontakt (Signal, ProtonMail nebo e-mail).';
         hasError = true;
       }
 
       // Validace zprávy
       if (!messageInput.value.trim()) {
-        if (errorMessage) errorMessage.textContent = 'Napište prosím alespoň krátkou zprávu.';
+        if (errorMessage) errorMessage.textContent = 'Napište prosím alespoň krátkou zprávu nebo dotaz.';
         hasError = true;
       }
 
@@ -137,8 +134,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
       // Příprava dat
       const clientName = nameInput.value.trim();
-      const clientEmail = emailInput.value.trim();
-      const clientPhone = phoneInput ? phoneInput.value.trim() : '';
+      const clientContact = emailInput.value.trim();
       const sessionType = typeInput ? typeInput.options[typeInput.selectedIndex].text : '';
       const clientMsg = messageInput.value.trim();
 
@@ -152,12 +148,13 @@ document.addEventListener('DOMContentLoaded', () => {
         formStatus.hidden = false;
         formStatus.innerHTML = `
           <strong>✓ Děkuji za vaši zprávu, ${clientName}!</strong><br>
-          Vaši poptávku jsem v pořádku přijal. Ozvu se vám na uvedený e-mail co nejdříve, obvykle do 24 hodin v pracovní dny.<br>
+          Vaši poptávku jsem v pořádku přijal. Ozvu se vám na uvedený kontakt co nejdříve.<br>
           <small style="display:block;margin-top:8px;opacity:0.9;">
-            Pro jistotu můžete zprávu odeslat i přímo přes svůj e-mailový program: 
-            <a href="mailto:terapie@filipsvec.cz?subject=${encodeURIComponent('Poptávka terapie - ' + clientName)}&body=${encodeURIComponent(
-              `Jméno: ${clientName}\nEmail: ${clientEmail}\nTelefon: ${clientPhone}\nForma: ${sessionType}\n\nZpráva:\n${clientMsg}`
-            )}" style="text-decoration:underline;color:inherit;font-weight:600;">Klikněte zde pro otevření e-mailu</a>.
+            Zprávu můžete odeslat také přímo přes svůj e-mail: 
+            <a href="mailto:terapie@filipsvec.cz?subject=${encodeURIComponent('Poptávka sezení - ' + clientName)}&body=${encodeURIComponent(
+              `Jméno/Nick: ${clientName}\nKontakt: ${clientContact}\nSlužba: ${sessionType}\n\nZpráva:\n${clientMsg}`
+            )}" style="text-decoration:underline;color:inherit;font-weight:600;">Otevřít e-mailového klienta</a> 
+            nebo mi rovnou napište na <a href="https://signal.me/#eu/hHbyh5yqJ-Pta3bUNkFNlMdcJDglwyU4LbDr_F6H8r4LpPLilYRBG51sU9q7CXVd" target="_blank" rel="noopener noreferrer" style="text-decoration:underline;color:inherit;font-weight:700;">Signal</a>.
           </small>
         `;
 
