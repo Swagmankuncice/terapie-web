@@ -373,22 +373,66 @@
           </div>
         </div>
 
-        <!-- Panel plateb v kryptu -->
-        <div class="crypto-payment-panel">
-          <div class="crypto-panel-header">
-            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="color:var(--color-cream)">
-              <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/>
-            </svg>
-            <strong>Podporované platební metody</strong>
+        <!-- Panel platebních metod -->
+        <div class="payment-methods-panel">
+          <div class="payment-panel-header">
+            <span class="payment-panel-badge">Možnosti úhrady</span>
+            <h3 class="payment-panel-title">Jak můžete sezení zaplatit</h3>
+            <p class="payment-panel-desc">
+              Preferuji a plně podporuji moderní digitální měny chránící soukromí, ale zvolit můžete i klasický bankovní převod nebo hotovost:
+            </p>
           </div>
-          <p class="crypto-panel-desc">
-            Preferuji a plně podporuji rychlé digitální platby chránící soukromí, stejně jako standardní způsoby:
-          </p>
-          <div class="crypto-pills">
-            <span class="crypto-pill"><span class="crypto-pill-icon">⚡</span> Bitcoin (Lightning Network)</span>
-            <span class="crypto-pill"><span class="crypto-pill-icon">🔒</span> Monero (XMR) – 100% anonymní</span>
-            <span class="crypto-pill"><span class="crypto-pill-icon">🪙</span> Bitcoin (On-chain) & USDT</span>
-            <span class="crypto-pill"><span class="crypto-pill-icon">💳</span> Bankovní převod / Hotovost</span>
+
+          <div class="payment-methods-grid">
+            <div class="payment-method-card">
+              <div class="payment-icon-wrapper">
+                <span class="payment-icon" aria-hidden="true">⚡</span>
+              </div>
+              <div class="payment-method-info">
+                <div class="payment-method-header">
+                  <strong class="payment-method-name">Bitcoin (Lightning)</strong>
+                  <span class="payment-tag">Doporučeno</span>
+                </div>
+                <p class="payment-method-detail">Blesková platba s prakticky nulovými poplatky a okamžitým potvrzením.</p>
+              </div>
+            </div>
+
+            <div class="payment-method-card">
+              <div class="payment-icon-wrapper">
+                <span class="payment-icon" aria-hidden="true">🔒</span>
+              </div>
+              <div class="payment-method-info">
+                <div class="payment-method-header">
+                  <strong class="payment-method-name">Monero (XMR)</strong>
+                  <span class="payment-tag payment-tag-anon">100% Anonymní</span>
+                </div>
+                <p class="payment-method-detail">Maximální finanční soukromí bez jakéhokoliv dohledání odesílatele.</p>
+              </div>
+            </div>
+
+            <div class="payment-method-card">
+              <div class="payment-icon-wrapper">
+                <span class="payment-icon" aria-hidden="true">🪙</span>
+              </div>
+              <div class="payment-method-info">
+                <div class="payment-method-header">
+                  <strong class="payment-method-name">On-chain BTC & USDT</strong>
+                </div>
+                <p class="payment-method-detail">Běžný krypto převod přímo do peněženky nebo ve stabilním kurzu USD.</p>
+              </div>
+            </div>
+
+            <div class="payment-method-card">
+              <div class="payment-icon-wrapper">
+                <span class="payment-icon" aria-hidden="true">💳</span>
+              </div>
+              <div class="payment-method-info">
+                <div class="payment-method-header">
+                  <strong class="payment-method-name">Bankovní převod / Hotovost</strong>
+                </div>
+                <p class="payment-method-detail">Klasický převod na účet nebo platba v hotovosti při Walk & Talk v Brně.</p>
+              </div>
+            </div>
           </div>
         </div>
 
