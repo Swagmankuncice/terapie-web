@@ -69,8 +69,8 @@ a následujte instrukce v terminálu.
 ## ✏️ Jak upravit údaje a kontakty
 
 Všechny texty můžete snadno editovat v souboru `index.html`:
-- **Jméno a titul:** hledejte `Mgr. František Švec` a nahraďte svým jménem.
+- **Jméno:** hledejte `Filip Švec` a upravte podle potřeby.
 - **Telefon:** hledejte `+420 777 123 456`.
-- **E-mail:** hledejte `terapie@svec.cz` (v `index.html` i v `script.js`).
+- **E-mail:** hledejte `terapie@filipsvec.cz` (v `index.html` i v `script.js`).
 - **Adresa:** hledejte `Vinohradská 112, Praha 3`.
 - **Ceny:** upravte v sekci `#cenik`.
