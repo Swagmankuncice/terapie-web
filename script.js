@@ -155,7 +155,7 @@ document.addEventListener('DOMContentLoaded', () => {
           Vaši poptávku jsem v pořádku přijal. Ozvu se vám na uvedený e-mail co nejdříve, obvykle do 24 hodin v pracovní dny.<br>
           <small style="display:block;margin-top:8px;opacity:0.9;">
             Pro jistotu můžete zprávu odeslat i přímo přes svůj e-mailový program: 
-            <a href="mailto:terapie@svec.cz?subject=${encodeURIComponent('Poptávka terapie - ' + clientName)}&body=${encodeURIComponent(
+            <a href="mailto:terapie@filipsvec.cz?subject=${encodeURIComponent('Poptávka terapie - ' + clientName)}&body=${encodeURIComponent(
               `Jméno: ${clientName}\nEmail: ${clientEmail}\nTelefon: ${clientPhone}\nForma: ${sessionType}\n\nZpráva:\n${clientMsg}`
             )}" style="text-decoration:underline;color:inherit;font-weight:600;">Klikněte zde pro otevření e-mailu</a>.
           </small>
