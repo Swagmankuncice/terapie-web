@@ -70,7 +70,7 @@ a následujte instrukce v terminálu.
 
 Všechny texty můžete snadno editovat v souboru `index.html`:
 - **Jméno:** hledejte `Filip Švec` a upravte podle potřeby.
-- **Telefon:** hledejte `+420 777 123 456`.
-- **E-mail:** hledejte `terapie@filipsvec.cz` (v `index.html` i v `script.js`).
+- **Telefon:** `+420 733 486 899`
+- **E-mail:** `filipsvec@pm.me`
 - **Lokalita:** hledejte `Brno a okolí` (parky Lužánky, Kraví hora, Wilsonův les atd.).
 - **Ceny:** upravte v sekci `#cenik`.

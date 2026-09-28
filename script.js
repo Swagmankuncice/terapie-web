@@ -151,7 +151,7 @@ document.addEventListener('DOMContentLoaded', () => {
           Vaši poptávku jsem v pořádku přijal. Ozvu se vám na uvedený kontakt co nejdříve.<br>
           <small style="display:block;margin-top:8px;opacity:0.9;">
             Zprávu můžete odeslat také přímo přes svůj e-mail: 
-            <a href="mailto:terapie@filipsvec.cz?subject=${encodeURIComponent('Poptávka sezení - ' + clientName)}&body=${encodeURIComponent(
+            <a href="mailto:filipsvec@pm.me?subject=${encodeURIComponent('Poptávka sezení - ' + clientName)}&body=${encodeURIComponent(
               `Jméno/Nick: ${clientName}\nKontakt: ${clientContact}\nSlužba: ${sessionType}\n\nZpráva:\n${clientMsg}`
             )}" style="text-decoration:underline;color:inherit;font-weight:600;">Otevřít e-mailového klienta</a> 
             nebo mi rovnou napište na <a href="https://signal.me/#eu/hHbyh5yqJ-Pta3bUNkFNlMdcJDglwyU4LbDr_F6H8r4LpPLilYRBG51sU9q7CXVd" target="_blank" rel="noopener noreferrer" style="text-decoration:underline;color:inherit;font-weight:700;">Signal</a>.
