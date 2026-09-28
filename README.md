@@ -13,10 +13,10 @@ Web je koncipován jako kompaktní **one-page landing page** s těmito sekcemi:
 1. **Hlavička (Header)** – Logo, přehledná navigace a rychlé tlačítko pro objednání.
 2. **Hero sekce** – Důvěryhodný úvod s hlavní myšlenkou, garancemi bezpečí/diskrétnosti a CTA tlačítky.
 3. **O mně** – Představení osobního a empatického přístupu, kvalifikace, etického kodexu a supervize.
-4. **S čím vám mohu pomoci** – 4 hlavní okruhy témat (Úzkost a vyhoření, Vztahy a hranice, Životní změny, Sebehodnota).
+4. **Nabízené služby** – 1. Walk and Talk Therapy v Brně (terapie v chůzi a zeleni) a 2. Online terapie (videohovory odkudkoliv), včetně přehledu řešených témat.
 5. **Průběh spolupráce** – 3 jasné kroky: od prvního kontaktu přes samotné sezení až po úlevu a nové vhledy.
-6. **Ceník** – Transparentní ceny individuální a párové konzultace včetně storno podmínek.
-7. **Kontakt & Objednání** – Přímé kontakty (telefon, e-mail, adresa v Praze s dostupností MHD) a interaktivní poptávkový formulář.
+6. **Ceník** – Transparentní ceny pro obě formy sezení (Walk & Talk i Online) včetně storno podmínek.
+7. **Kontakt & Objednání** – Přímé kontakty (telefon, e-mail, lokality v Brně) a interaktivní poptávkový formulář.
 8. **Časté dotazy (FAQ)** – Harmonika s odpověďmi na nejčastější obavy klientů (doporučení od lékaře, mlčenlivost, online forma).
 9. **Patička** – Box s krizovými linkami bezplatné pomoci (Linka první psychické pomoci 116 123) a autorská práva.
 
@@ -72,5 +72,5 @@ Všechny texty můžete snadno editovat v souboru `index.html`:
 - **Jméno:** hledejte `Filip Švec` a upravte podle potřeby.
 - **Telefon:** hledejte `+420 777 123 456`.
 - **E-mail:** hledejte `terapie@filipsvec.cz` (v `index.html` i v `script.js`).
-- **Adresa:** hledejte `Vinohradská 112, Praha 3`.
+- **Lokalita:** hledejte `Brno a okolí` (parky Lužánky, Kraví hora, Wilsonův les atd.).
 - **Ceny:** upravte v sekci `#cenik`.
