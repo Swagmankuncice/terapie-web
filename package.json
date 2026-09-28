@@ -1,0 +1,18 @@
+{
+  "name": "terapie-web",
+  "version": "1.0.0",
+  "description": "Osobní jednostránkový web pro terapeutické služby a psychologické poradenství",
+  "main": "index.html",
+  "scripts": {
+    "dev": "npx serve .",
+    "start": "npx serve ."
+  },
+  "keywords": [
+    "terapie",
+    "psychoterapie",
+    "landing-page",
+    "vercel"
+  ],
+  "author": "Mgr. František Švec",
+  "license": "MIT"
+}

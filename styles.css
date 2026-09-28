@@ -1,0 +1,1239 @@
+/* ==========================================================================
+   Terapeutické služby - Moderní CSS Stylopis
+   Navrženo pro klidnou, přívětivou a důvěryhodnou atmosféru
+   ========================================================================== */
+
+/* 1. CSS Custom Properties (Barevná paleta & Typografie) */
+:root {
+  /* Přírodní a uklidňující barevná paleta */
+  --color-primary: #284b3f;
+  --color-primary-hover: #1f3a31;
+  --color-primary-subtle: #edf3f0;
+  --color-primary-light: #d8e5df;
+  
+  --color-accent: #c2835c;
+  --color-accent-hover: #ad704a;
+  --color-accent-subtle: #faf2ec;
+
+  --color-bg: #f9f8f5;
+  --color-surface: #ffffff;
+  --color-surface-muted: #f4f1ea;
+
+  --color-text: #222927;
+  --color-text-muted: #596762;
+  --color-text-light: #83928c;
+  --color-border: #e4dfd6;
+  --color-border-subtle: #ece8e1;
+
+  --color-success: #2b7a4b;
+  --color-error: #c0392b;
+
+  /* Typografie */
+  --font-heading: 'Cormorant Garamond', Georgia, serif;
+  --font-sans: 'Plus Jakarta Sans', system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+
+  /* Rozměry a mezery */
+  --container-max: 1140px;
+  --header-height: 76px;
+  --radius-sm: 8px;
+  --radius-md: 16px;
+  --radius-lg: 24px;
+  --radius-full: 9999px;
+
+  /* Stíny (jemné, organické) */
+  --shadow-sm: 0 2px 8px rgba(34, 41, 39, 0.04);
+  --shadow-md: 0 8px 24px rgba(34, 41, 39, 0.06), 0 2px 6px rgba(34, 41, 39, 0.03);
+  --shadow-lg: 0 16px 36px rgba(34, 41, 39, 0.09), 0 4px 12px rgba(34, 41, 39, 0.04);
+
+  /* Přechody */
+  --transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* 2. Reset a základní nastavení */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: calc(var(--header-height) + 1.5rem);
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  font-family: var(--font-sans);
+  font-size: 1.05rem;
+  line-height: 1.68;
+  color: var(--color-text);
+  background-color: var(--color-bg);
+  background-image: radial-gradient(circle at 10% 20%, rgba(40, 75, 63, 0.03) 0%, transparent 40%),
+                    radial-gradient(circle at 90% 80%, rgba(194, 131, 92, 0.03) 0%, transparent 40%);
+  background-attachment: fixed;
+  overflow-x: hidden;
+}
+
+/* Zpřístupnění pro čtečky */
+.skip-to-content {
+  position: absolute;
+  top: -999px;
+  left: 1rem;
+  background: var(--color-primary);
+  color: #fff;
+  padding: 0.75rem 1.25rem;
+  border-radius: var(--radius-sm);
+  z-index: 9999;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.skip-to-content:focus {
+  top: 1rem;
+}
+
+/* Kontejner */
+.container {
+  width: 100%;
+  max-width: var(--container-max);
+  margin-inline: auto;
+  padding-inline: 1.5rem;
+}
+
+/* Typografie obecná */
+h1, h2, h3, h4 {
+  font-family: var(--font-heading);
+  color: var(--color-text);
+  line-height: 1.2;
+  font-weight: 600;
+  text-wrap: balance;
+}
+
+p {
+  margin-block-end: 1rem;
+}
+
+p:last-child {
+  margin-block-end: 0;
+}
+
+a {
+  color: var(--color-primary);
+  text-decoration: none;
+  transition: var(--transition);
+}
+
+a:hover {
+  color: var(--color-accent);
+}
+
+/* Tlačítka s min. výškou 48px pro tap target */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.6rem;
+  min-height: 48px;
+  padding: 0.8rem 1.6rem;
+  border-radius: var(--radius-full);
+  font-family: var(--font-sans);
+  font-size: 0.98rem;
+  font-weight: 600;
+  text-decoration: none;
+  cursor: pointer;
+  border: 1px solid transparent;
+  transition: var(--transition);
+  text-align: center;
+}
+
+.btn-primary {
+  background-color: var(--color-primary);
+  color: #ffffff;
+  box-shadow: 0 4px 14px rgba(40, 75, 63, 0.2);
+}
+
+.btn-primary:hover {
+  background-color: var(--color-primary-hover);
+  color: #ffffff;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 18px rgba(40, 75, 63, 0.28);
+}
+
+.btn-secondary {
+  background-color: transparent;
+  color: var(--color-primary);
+  border-color: var(--color-border);
+}
+
+.btn-secondary:hover {
+  background-color: var(--color-surface);
+  border-color: var(--color-primary);
+  color: var(--color-primary);
+  transform: translateY(-2px);
+}
+
+.btn-block {
+  width: 100%;
+}
+
+/* 3. Hlavička a Navigace */
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  height: var(--header-height);
+  background-color: rgba(249, 248, 245, 0.88);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-block-end: 1px solid var(--color-border-subtle);
+  transition: var(--transition);
+}
+
+.site-header.scrolled {
+  background-color: rgba(255, 255, 255, 0.94);
+  box-shadow: var(--shadow-sm);
+}
+
+.header-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 100%;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  text-decoration: none;
+  color: var(--color-text);
+}
+
+.brand-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  background-color: var(--color-primary-subtle);
+  color: var(--color-primary);
+  border-radius: var(--radius-md);
+  border: 1px solid var(--color-primary-light);
+}
+
+.brand-text {
+  display: flex;
+  flex-direction: column;
+}
+
+.brand-name {
+  font-family: var(--font-heading);
+  font-size: 1.35rem;
+  font-weight: 600;
+  line-height: 1.1;
+  color: var(--color-text);
+}
+
+.brand-sub {
+  font-size: 0.78rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--color-text-muted);
+  font-weight: 500;
+}
+
+.nav-list {
+  display: flex;
+  align-items: center;
+  gap: 1.8rem;
+  list-style: none;
+}
+
+.nav-link {
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: var(--color-text-muted);
+  padding: 0.4rem 0.2rem;
+  position: relative;
+}
+
+.nav-link:hover {
+  color: var(--color-primary);
+}
+
+.nav-link-cta {
+  background-color: var(--color-primary);
+  color: #fff !important;
+  padding: 0.55rem 1.25rem;
+  border-radius: var(--radius-full);
+  font-weight: 600;
+  box-shadow: 0 2px 8px rgba(40, 75, 63, 0.15);
+}
+
+.nav-link-cta:hover {
+  background-color: var(--color-primary-hover);
+  transform: translateY(-1px);
+}
+
+/* Mobilní menu tlačítko */
+.menu-toggle {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  gap: 5px;
+  width: 44px;
+  height: 44px;
+  padding: 10px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+.menu-bar {
+  display: block;
+  width: 24px;
+  height: 2px;
+  background-color: var(--color-text);
+  border-radius: 2px;
+  transition: var(--transition);
+}
+
+/* 4. Hero Sekce */
+.hero-section {
+  padding-block: 4rem 4.5rem;
+  position: relative;
+}
+
+.hero-container {
+  display: grid;
+  grid-template-columns: 1.2fr 0.8fr;
+  align-items: center;
+  gap: 3.5rem;
+}
+
+.badge-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background-color: var(--color-primary-subtle);
+  color: var(--color-primary);
+  border: 1px solid var(--color-primary-light);
+  padding: 0.4rem 0.9rem;
+  border-radius: var(--radius-full);
+  font-size: 0.85rem;
+  font-weight: 600;
+  margin-block-end: 1.5rem;
+}
+
+.badge-dot {
+  width: 8px;
+  height: 8px;
+  background-color: var(--color-primary);
+  border-radius: 50%;
+}
+
+.hero-title {
+  font-size: clamp(2.4rem, 4.5vw, 3.8rem);
+  line-height: 1.15;
+  margin-block-end: 1.5rem;
+  letter-spacing: -0.01em;
+}
+
+.hero-description {
+  font-size: 1.15rem;
+  color: var(--color-text-muted);
+  line-height: 1.7;
+  margin-block-end: 2.2rem;
+  max-width: 580px;
+}
+
+.hero-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-block-end: 2.8rem;
+}
+
+.hero-highlights {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  padding-block-start: 1.5rem;
+  border-block-start: 1px solid var(--color-border-subtle);
+}
+
+.highlight-item {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  font-size: 0.92rem;
+  color: var(--color-text-muted);
+  font-weight: 500;
+}
+
+.highlight-icon {
+  display: flex;
+  align-items: center;
+  color: var(--color-primary);
+}
+
+/* Vizuální prvek Hero */
+.visual-card {
+  position: relative;
+  background: linear-gradient(145deg, #ffffff, #f7f5ef);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  padding: 3rem 2.2rem;
+  box-shadow: var(--shadow-lg);
+}
+
+.quote-symbol {
+  font-family: var(--font-heading);
+  font-size: 5rem;
+  line-height: 0.8;
+  color: var(--color-primary-light);
+  margin-block-end: 0.5rem;
+  user-select: none;
+}
+
+.visual-quote {
+  font-family: var(--font-heading);
+  font-size: 1.45rem;
+  font-style: italic;
+  line-height: 1.45;
+  color: var(--color-text);
+  margin-block-end: 1.8rem;
+}
+
+.visual-meta {
+  display: flex;
+  flex-direction: column;
+}
+
+.visual-author {
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--color-primary);
+}
+
+.visual-role {
+  font-size: 0.85rem;
+  color: var(--color-text-muted);
+}
+
+/* 5. Společné sekce */
+.section {
+  padding-block: 5rem;
+  scroll-margin-top: 5rem;
+}
+
+.section-tag {
+  display: inline-block;
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  font-weight: 700;
+  color: var(--color-accent);
+  margin-block-end: 0.5rem;
+}
+
+.section-title {
+  font-size: clamp(2rem, 3.5vw, 2.8rem);
+  margin-block-end: 1rem;
+}
+
+.section-subtitle {
+  font-size: 1.15rem;
+  color: var(--color-text-muted);
+  max-width: 650px;
+  margin-inline: auto;
+  line-height: 1.6;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.section-header {
+  margin-block-end: 3.5rem;
+}
+
+/* Sekce O mně */
+.about-section {
+  background-color: var(--color-surface);
+  border-block: 1px solid var(--color-border-subtle);
+}
+
+.about-grid {
+  display: grid;
+  grid-template-columns: 0.85fr 1.15fr;
+  align-items: center;
+  gap: 4rem;
+}
+
+.about-image-wrapper {
+  position: relative;
+}
+
+.about-image-placeholder {
+  width: 100%;
+  aspect-ratio: 4/5;
+  border-radius: var(--radius-lg);
+  background: linear-gradient(160deg, #e7eee9 0%, #dbd6ca 100%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid var(--color-border);
+  box-shadow: var(--shadow-md);
+  padding: 2rem;
+  text-align: center;
+}
+
+.placeholder-icon {
+  color: var(--color-primary);
+  margin-block-end: 1rem;
+}
+
+.placeholder-label {
+  font-family: var(--font-heading);
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: var(--color-text);
+}
+
+.placeholder-sublabel {
+  font-size: 0.85rem;
+  color: var(--color-text-muted);
+}
+
+.about-badge {
+  position: absolute;
+  bottom: -1.5rem;
+  right: -1.5rem;
+  background-color: var(--color-primary);
+  color: #fff;
+  padding: 1.2rem 1.6rem;
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-lg);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  line-height: 1.1;
+}
+
+.badge-number {
+  font-family: var(--font-heading);
+  font-size: 2.2rem;
+  font-weight: 700;
+}
+
+.badge-text {
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  opacity: 0.9;
+}
+
+.lead-text {
+  font-size: 1.2rem;
+  color: var(--color-primary);
+  font-weight: 500;
+  line-height: 1.6;
+  margin-block-end: 1.2rem;
+}
+
+.credentials-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+  margin-block-start: 2rem;
+}
+
+.credential-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.9rem;
+}
+
+.credential-bullet {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  background-color: var(--color-primary-subtle);
+  color: var(--color-primary);
+  font-weight: 700;
+  font-size: 0.85rem;
+  flex-shrink: 0;
+  margin-block-start: 2px;
+}
+
+.credential-item strong {
+  display: block;
+  font-size: 1.02rem;
+  color: var(--color-text);
+  margin-block-end: 0.2rem;
+}
+
+.credential-item p {
+  font-size: 0.92rem;
+  color: var(--color-text-muted);
+  line-height: 1.45;
+}
+
+/* 6. Sekce Služby */
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1.8rem;
+}
+
+.service-card {
+  background-color: var(--color-surface);
+  border: 1px solid var(--color-border-subtle);
+  border-radius: var(--radius-md);
+  padding: 2.2rem;
+  box-shadow: var(--shadow-sm);
+  transition: var(--transition);
+  display: flex;
+  flex-direction: column;
+}
+
+.service-card:hover {
+  transform: translateY(-4px);
+  border-color: var(--color-primary-light);
+  box-shadow: var(--shadow-md);
+}
+
+.service-icon {
+  width: 56px;
+  height: 56px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: var(--radius-md);
+  background-color: var(--color-primary-subtle);
+  color: var(--color-primary);
+  margin-block-end: 1.4rem;
+}
+
+.service-title {
+  font-size: 1.4rem;
+  margin-block-end: 0.8rem;
+}
+
+.service-desc {
+  font-size: 0.95rem;
+  color: var(--color-text-muted);
+  line-height: 1.6;
+  margin-block-end: 1.2rem;
+  flex-grow: 1;
+}
+
+.service-points {
+  list-style: none;
+  font-size: 0.88rem;
+  color: var(--color-text-muted);
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+  border-block-start: 1px solid var(--color-border-subtle);
+  padding-block-start: 1rem;
+}
+
+.service-points li::before {
+  content: "• ";
+  color: var(--color-accent);
+  font-weight: bold;
+}
+
+/* 7. Sekce Průběh */
+.process-section {
+  background-color: var(--color-surface-muted);
+}
+
+.process-steps {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  position: relative;
+}
+
+.step-card {
+  background-color: var(--color-surface);
+  border: 1px solid var(--color-border-subtle);
+  border-radius: var(--radius-md);
+  padding: 2.5rem 2rem;
+  box-shadow: var(--shadow-sm);
+  position: relative;
+}
+
+.step-number {
+  font-family: var(--font-heading);
+  font-size: 3.2rem;
+  line-height: 1;
+  font-weight: 700;
+  color: var(--color-primary-light);
+  margin-block-end: 0.8rem;
+}
+
+.step-title {
+  font-size: 1.35rem;
+  margin-block-end: 0.8rem;
+}
+
+.step-desc {
+  font-size: 0.96rem;
+  color: var(--color-text-muted);
+  line-height: 1.6;
+}
+
+/* 8. Sekce Ceník */
+.pricing-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 2rem;
+  max-width: 820px;
+  margin-inline: auto;
+  margin-block-end: 2.5rem;
+}
+
+.pricing-card {
+  background-color: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  padding: 2.8rem 2.2rem;
+  box-shadow: var(--shadow-sm);
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+.pricing-card.featured {
+  border-color: var(--color-primary);
+  border-width: 2px;
+  box-shadow: var(--shadow-md);
+}
+
+.pricing-badge {
+  position: absolute;
+  top: -12px;
+  right: 2rem;
+  background-color: var(--color-primary);
+  color: #fff;
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  padding: 0.35rem 0.9rem;
+  border-radius: var(--radius-full);
+}
+
+.pricing-title {
+  font-size: 1.6rem;
+  margin-block-end: 0.4rem;
+}
+
+.pricing-subtitle {
+  font-size: 0.92rem;
+  color: var(--color-text-muted);
+  margin-block-end: 1.5rem;
+}
+
+.pricing-amount {
+  display: flex;
+  align-items: baseline;
+  gap: 0.4rem;
+  margin-block-end: 1.8rem;
+  padding-block-end: 1.5rem;
+  border-block-end: 1px solid var(--color-border-subtle);
+}
+
+.amount-number {
+  font-family: var(--font-heading);
+  font-size: 3.2rem;
+  font-weight: 700;
+  line-height: 1;
+  color: var(--color-primary);
+}
+
+.amount-currency {
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: var(--color-text);
+}
+
+.amount-duration {
+  font-size: 0.95rem;
+  color: var(--color-text-muted);
+}
+
+.pricing-features {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+  margin-block-end: 2rem;
+  flex-grow: 1;
+}
+
+.pricing-features li {
+  font-size: 0.95rem;
+  color: var(--color-text-muted);
+  position: relative;
+  padding-inline-start: 1.6rem;
+}
+
+.pricing-features li::before {
+  content: "✓";
+  position: absolute;
+  left: 0;
+  color: var(--color-primary);
+  font-weight: bold;
+}
+
+.pricing-notice {
+  max-width: 820px;
+  margin-inline: auto;
+  background-color: var(--color-surface-muted);
+  border: 1px solid var(--color-border-subtle);
+  border-radius: var(--radius-md);
+  padding: 1.4rem 1.8rem;
+  font-size: 0.92rem;
+  color: var(--color-text-muted);
+  text-align: center;
+}
+
+/* 9. Sekce Kontakt & Formulář */
+.contact-section {
+  background-color: var(--color-surface);
+  border-block-start: 1px solid var(--color-border-subtle);
+}
+
+.contact-grid {
+  display: grid;
+  grid-template-columns: 1fr 1.1fr;
+  gap: 4.5rem;
+  align-items: flex-start;
+}
+
+.contact-methods {
+  display: flex;
+  flex-direction: column;
+  gap: 1.8rem;
+  margin-block-start: 2.2rem;
+}
+
+.contact-method-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 1.2rem;
+}
+
+.contact-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 48px;
+  border-radius: var(--radius-md);
+  background-color: var(--color-primary-subtle);
+  color: var(--color-primary);
+  flex-shrink: 0;
+}
+
+.method-label {
+  display: block;
+  font-size: 0.82rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  font-weight: 700;
+  color: var(--color-text-light);
+  margin-block-end: 0.2rem;
+}
+
+.method-value {
+  display: block;
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: var(--color-text);
+  margin-block-end: 0.2rem;
+}
+
+.method-note {
+  font-size: 0.88rem;
+  color: var(--color-text-muted);
+}
+
+/* Formulářová karta */
+.contact-form-card {
+  background-color: var(--color-bg);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  padding: 2.8rem 2.2rem;
+  box-shadow: var(--shadow-sm);
+}
+
+.form-title {
+  font-size: 1.8rem;
+  margin-block-end: 0.4rem;
+}
+
+.form-desc {
+  font-size: 0.95rem;
+  color: var(--color-text-muted);
+  margin-block-end: 1.8rem;
+}
+
+.form-group {
+  margin-block-end: 1.3rem;
+}
+
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+
+label {
+  display: block;
+  font-size: 0.92rem;
+  font-weight: 600;
+  color: var(--color-text);
+  margin-block-end: 0.45rem;
+}
+
+.required {
+  color: var(--color-accent);
+}
+
+.optional {
+  font-weight: 400;
+  color: var(--color-text-light);
+  font-size: 0.85rem;
+}
+
+input, select, textarea {
+  width: 100%;
+  font-family: var(--font-sans);
+  font-size: 1rem;
+  padding: 0.8rem 1rem;
+  min-height: 48px;
+  background-color: var(--color-surface);
+  border: 1.5px solid var(--color-border);
+  border-radius: var(--radius-sm);
+  color: var(--color-text);
+  transition: var(--transition);
+}
+
+textarea {
+  min-height: 110px;
+  resize: vertical;
+  line-height: 1.5;
+}
+
+input:focus, select:focus, textarea:focus {
+  outline: none;
+  border-color: var(--color-primary);
+  box-shadow: 0 0 0 3px rgba(40, 75, 63, 0.15);
+}
+
+/* Moderní stav validace podle web guidance */
+input:user-invalid, textarea:user-invalid {
+  border-color: var(--color-error);
+}
+
+input:user-valid:not(:placeholder-shown), textarea:user-valid:not(:placeholder-shown) {
+  border-color: var(--color-success);
+}
+
+.select-wrapper {
+  position: relative;
+}
+
+.field-error {
+  display: block;
+  font-size: 0.82rem;
+  color: var(--color-error);
+  margin-block-start: 0.3rem;
+  min-height: 1rem;
+}
+
+.form-status {
+  padding: 1rem;
+  border-radius: var(--radius-sm);
+  margin-block-start: 1rem;
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+
+.form-status.success {
+  background-color: #e8f5e9;
+  color: #1b5e20;
+  border: 1px solid #a5d6a7;
+}
+
+.form-status.error {
+  background-color: #ffebee;
+  color: #b71c1c;
+  border: 1px solid #ffcdd2;
+}
+
+.form-privacy-note {
+  font-size: 0.82rem;
+  color: var(--color-text-light);
+  margin-block-start: 1.2rem;
+  text-align: center;
+}
+
+/* 10. FAQ */
+.faq-section {
+  background-color: var(--color-bg);
+}
+
+.faq-container {
+  max-width: 780px;
+}
+
+.faq-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.faq-item {
+  background-color: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  transition: var(--transition);
+}
+
+.faq-item[open] {
+  border-color: var(--color-primary-light);
+  box-shadow: var(--shadow-sm);
+}
+
+.faq-question {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1.4rem 1.8rem;
+  font-size: 1.15rem;
+  font-weight: 600;
+  color: var(--color-text);
+  cursor: pointer;
+  list-style: none;
+  user-select: none;
+  min-height: 48px;
+}
+
+.faq-question::-webkit-details-marker {
+  display: none;
+}
+
+.faq-chevron {
+  font-size: 1.4rem;
+  font-weight: 300;
+  color: var(--color-primary);
+  transition: var(--transition);
+}
+
+.faq-item[open] .faq-chevron {
+  transform: rotate(45deg);
+}
+
+.faq-answer {
+  padding: 0 1.8rem 1.4rem 1.8rem;
+  color: var(--color-text-muted);
+  font-size: 0.98rem;
+  line-height: 1.65;
+}
+
+/* 11. Patička */
+.site-footer {
+  background-color: #1a2421;
+  color: #d1ded9;
+  padding-block: 4rem 2.5rem;
+}
+
+.footer-crisis-box {
+  background-color: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: var(--radius-md);
+  padding: 1.4rem 1.8rem;
+  margin-block-end: 3rem;
+}
+
+.crisis-title {
+  color: #f7d2b2;
+  font-size: 0.98rem;
+  margin-block-end: 0.4rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.crisis-desc {
+  font-size: 0.92rem;
+  color: #a8b8b2;
+  line-height: 1.6;
+}
+
+.crisis-desc a {
+  color: #ffffff;
+  text-decoration: underline;
+  font-weight: 700;
+}
+
+.crisis-desc a:hover {
+  color: var(--color-accent);
+}
+
+.footer-bottom {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  border-block-start: 1px solid rgba(255, 255, 255, 0.08);
+  padding-block-start: 2rem;
+}
+
+.footer-brand {
+  display: flex;
+  flex-direction: column;
+}
+
+.footer-brand strong {
+  font-family: var(--font-heading);
+  font-size: 1.3rem;
+  color: #fff;
+}
+
+.footer-brand span {
+  font-size: 0.85rem;
+  color: #8fa099;
+}
+
+.footer-copy {
+  font-size: 0.85rem;
+  color: #8fa099;
+}
+
+/* 12. Responzivní přizpůsobení */
+@media (max-width: 960px) {
+  .hero-container {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+  }
+
+  .hero-visual {
+    order: -1;
+  }
+
+  .about-grid {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+  }
+
+  .about-badge {
+    right: 1rem;
+    bottom: -1rem;
+  }
+
+  .process-steps {
+    grid-template-columns: 1fr;
+    gap: 1.2rem;
+  }
+
+  .contact-grid {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+}
+
+@media (max-width: 768px) {
+  :root {
+    --header-height: 68px;
+  }
+
+  .site-header {
+    background-color: var(--color-surface);
+  }
+
+  .menu-toggle {
+    display: flex;
+  }
+
+  .main-nav {
+    position: fixed;
+    top: var(--header-height);
+    left: 0;
+    right: 0;
+    background-color: var(--color-surface);
+    border-block-end: 1px solid var(--color-border);
+    padding: 1.5rem;
+    box-shadow: var(--shadow-lg);
+    transform: translateY(-120%);
+    opacity: 0;
+    visibility: hidden;
+    transition: transform 0.3s ease, opacity 0.3s ease, visibility 0.3s;
+  }
+
+  .main-nav.is-open {
+    transform: translateY(0);
+    opacity: 1;
+    visibility: visible;
+  }
+
+  .nav-list {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0.8rem;
+  }
+
+  .nav-link {
+    display: block;
+    padding: 0.8rem 1rem;
+    border-radius: var(--radius-sm);
+  }
+
+  .nav-link-cta {
+    text-align: center;
+    margin-block-start: 0.5rem;
+  }
+
+  .form-row {
+    grid-template-columns: 1fr;
+  }
+
+  .hero-actions {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .hero-actions .btn {
+    width: 100%;
+  }
+
+  .footer-bottom {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+
+/* 13. Přístupnost: redukovaný pohyb */
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  
+  *, *::before, *::after {
+    animation-duration: 0.001s !important;
+    transition-duration: 0.001s !important;
+  }
+}

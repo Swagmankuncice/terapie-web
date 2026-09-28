@@ -1,0 +1,610 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Terapeutické služby & psychologické poradenství | Mgr. František Švec</title>
+  <meta name="description" content="Individuální terapie a psychologické poradenství v Praze i online. Bezpečný a diskrétní prostor pro řešení úzkostí, stresu, životních krizí a vztahových obtíží.">
+  <meta name="keywords" content="terapie, psychoterapie Praha, psychologické poradenství, online terapie, úzkosti, vyhoření, pomoc při krizi">
+  <meta name="author" content="Mgr. František Švec">
+  
+  <!-- Open Graph / Meta pro sociální sítě -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Terapeutické služby | Mgr. František Švec">
+  <meta property="og:description" content="Bezpečný a diskrétní prostor pro vaši vnitřní rovnováhu. Individuální terapie osobně i online.">
+  <meta property="og:locale" content="cs_CZ">
+
+  <!-- Favicon (SVG ikona klidu / listu) -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><circle cx='50' cy='50' r='48' fill='%232d5444'/><path d='M50 20 C65 35 75 55 50 80 C25 55 35 35 50 20 Z' fill='%23e8efe9'/></svg>">
+  
+  <!-- Google Fonts: Cormorant Garamond (nadpisy) a Plus Jakarta Sans (text) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,400&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- Přístupnost: přeskočení na hlavní obsah -->
+  <a href="#hlavni-obsah" class="skip-to-content">Přejít k hlavnímu obsahu</a>
+
+  <!-- Navigace -->
+  <header class="site-header" id="top">
+    <div class="container header-container">
+      <a href="#top" class="brand" aria-label="Úvodní stránka">
+        <span class="brand-icon" aria-hidden="true">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 4.18 2 8 0 5.5-4.78 10-10 10Z"/>
+            <path d="M2 21c0-3 1.85-5.36 5.08-6C9.5 14.52 12 13 13 12"/>
+          </svg>
+        </span>
+        <div class="brand-text">
+          <span class="brand-name">Mgr. František Švec</span>
+          <span class="brand-sub">Terapeutické služby</span>
+        </div>
+      </a>
+
+      <nav class="main-nav" id="main-nav" aria-label="Hlavní navigace">
+        <ul class="nav-list">
+          <li><a href="#o-mne" class="nav-link">O mně</a></li>
+          <li><a href="#sluzby" class="nav-link">S čím pomáhám</a></li>
+          <li><a href="#jak-pracuji" class="nav-link">Průběh sezení</a></li>
+          <li><a href="#cenik" class="nav-link">Ceník</a></li>
+          <li><a href="#kontakt" class="nav-link nav-link-cta">Objednat sezení</a></li>
+        </ul>
+      </nav>
+
+      <button type="button" class="menu-toggle" id="menu-toggle" aria-expanded="false" aria-controls="main-nav" aria-label="Otevřít menu">
+        <span class="menu-bar"></span>
+        <span class="menu-bar"></span>
+        <span class="menu-bar"></span>
+      </button>
+    </div>
+  </header>
+
+  <main id="hlavni-obsah">
+    <!-- Hero sekce -->
+    <section class="hero-section">
+      <div class="container hero-container">
+        <div class="hero-content">
+          <div class="badge-pill">
+            <span class="badge-dot" aria-hidden="true"></span>
+            <span>Bezpečný & diskrétní prostor pro změnu</span>
+          </div>
+
+          <h1 class="hero-title">
+            Najděte klid, porozumění a oporu v náročných chvílích.
+          </h1>
+
+          <p class="hero-description">
+            Individuální terapie a psychologické poradenství v příjemné pracovně v Praze i online. Pomáhám zvládat úzkosti, vyčerpání, vztahové křižovatky a hledat cestu k vnitřní stabilitě.
+          </p>
+
+          <div class="hero-actions">
+            <a href="#kontakt" class="btn btn-primary">
+              <span>Domluvit si termín</span>
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M5 12h14M12 5l7 7-7 7"/>
+              </svg>
+            </a>
+            <a href="#jak-pracuji" class="btn btn-secondary">
+              Jak probíhá spolupráce
+            </a>
+          </div>
+
+          <!-- Výhody / Klíčové prvky -->
+          <div class="hero-highlights">
+            <div class="highlight-item">
+              <span class="highlight-icon" aria-hidden="true">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+                </svg>
+              </span>
+              <span>100% diskrétnost a bezpečí</span>
+            </div>
+            <div class="highlight-item">
+              <span class="highlight-icon" aria-hidden="true">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <rect x="2" y="3" width="20" height="14" rx="2" ry="2"/>
+                  <line x1="8" y1="21" x2="16" y2="21"/>
+                  <line x1="12" y1="17" x2="12" y2="21"/>
+                </svg>
+              </span>
+              <span>Osobně v Praze i online</span>
+            </div>
+            <div class="highlight-item">
+              <span class="highlight-icon" aria-hidden="true">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <circle cx="12" cy="12" r="10"/>
+                  <polyline points="12 6 12 12 16 14"/>
+                </svg>
+              </span>
+              <span>Termíny obvykle do týdne</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="hero-visual" aria-hidden="true">
+          <div class="visual-card">
+            <div class="quote-symbol">“</div>
+            <p class="visual-quote">
+              „Nejste na to sami. Každá krize v sobě nese možnost hlubšího porozumění sobě a nového začátku.“
+            </p>
+            <div class="visual-meta">
+              <span class="visual-author">Mgr. František Švec</span>
+              <span class="visual-role">terapeut & poradce</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Sekce O mně -->
+    <section class="section about-section" id="o-mne">
+      <div class="container">
+        <div class="about-grid">
+          <div class="about-image-wrapper">
+            <div class="about-image-placeholder">
+              <div class="placeholder-icon">
+                <svg width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                  <circle cx="12" cy="8" r="5"/>
+                  <path d="M20 21a8 8 0 0 0-16 0"/>
+                </svg>
+              </div>
+              <span class="placeholder-label">Mgr. František Švec</span>
+              <span class="placeholder-sublabel">Vaše fotografie pracovny / portrét</span>
+            </div>
+            <div class="about-badge">
+              <span class="badge-number">8+</span>
+              <span class="badge-text">let práce s klienty</span>
+            </div>
+          </div>
+
+          <div class="about-content">
+            <span class="section-tag">O mém přístupu</span>
+            <h2 class="section-title">Nesoudící přijetí a individuální tempo</h2>
+            
+            <p class="lead-text">
+              Věřím, že každý z nás v sobě nosí schopnost překonat náročné situace a nalézt ztracenou rovnováhu. Někdy se však dostaneme do bodu, kdy je toho zkrátka příliš mnoho na to, abychom to nesli sami.
+            </p>
+
+            <p>
+              V terapeutickém setkání vám nebudu dávat instantní rady ani univerzální šablony. Místo toho vytvářím klidný, důvěrný prostor, kde můžete zpomalit, nahlas pojmenovat své obavy a bezpečně prozkoumat to, co prožíváte. Společně hledáme způsoby, které dávají smysl vám a které přinášejí dlouhodobou úlevu.
+            </p>
+
+            <div class="credentials-list">
+              <div class="credential-item">
+                <span class="credential-bullet" aria-hidden="true">✓</span>
+                <div>
+                  <strong>Komplexní psychoterapeutický výcvik</strong>
+                  <p>Systematické vzdělání v akreditovaném psychoterapeutickém směru.</p>
+                </div>
+              </div>
+              <div class="credential-item">
+                <span class="credential-bullet" aria-hidden="true">✓</span>
+                <div>
+                  <strong>Přísné dodržování etického kodexu</strong>
+                  <p>Absolutní mlčenlivost a ochrana vašeho soukromí jsou samozřejmostí.</p>
+                </div>
+              </div>
+              <div class="credential-item">
+                <span class="credential-bullet" aria-hidden="true">✓</span>
+                <div>
+                  <strong>Pravidelná supervize</strong>
+                  <p>Průběžná odborná reflexe a péče o nejvyšší kvalitu poskytované péče.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Sekce S čím vám mohu pomoci -->
+    <section class="section services-section" id="sluzby">
+      <div class="container">
+        <div class="section-header text-center">
+          <span class="section-tag">Oblasti péče</span>
+          <h2 class="section-title">S čím se na mě můžete obrátit</h2>
+          <p class="section-subtitle">
+            Ať už řešíte konkrétní problém, nebo se jen necítíte dobře a hledáte porozumění, společně se podíváme na vaše témata.
+          </p>
+        </div>
+
+        <div class="services-grid">
+          <article class="service-card">
+            <div class="service-icon" aria-hidden="true">
+              <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+                <path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"/>
+              </svg>
+            </div>
+            <h3 class="service-title">Úzkosti, stres & vyhoření</h3>
+            <p class="service-desc">
+              Pocit neustálého vnitřního napětí, panika, zahlcení povinnostmi, chronická únava či nespavost. Naučíte se se stresem zacházet a znovu se nadechnout.
+            </p>
+            <ul class="service-points">
+              <li>Práce se strachem a panickými atakami</li>
+              <li>Přetížení v práci a prevence vyhoření</li>
+              <li>Zklidnění těla i roztěkané mysli</li>
+            </ul>
+          </article>
+
+          <article class="service-card">
+            <div class="service-icon" aria-hidden="true">
+              <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+                <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/>
+                <circle cx="9" cy="7" r="4"/>
+                <path d="M22 21v-2a4 4 0 0 0-3-3.87"/>
+                <path d="M16 3.13a4 4 0 0 1 0 7.75"/>
+              </svg>
+            </div>
+            <h3 class="service-title">Vztahy & osobní hranice</h3>
+            <p class="service-desc">
+              Konflikty s partnerem, v rodině či na pracovišti. Problém říkat „ne“, strach z odmítnutí nebo opakování stejných nefunkčních vztahových scénářů.
+            </p>
+            <ul class="service-points">
+              <li>Zdravé nastavování hranic bez pocitu viny</li>
+              <li>Konstruktivní a klidná komunikace</li>
+              <li>Pochopení vztahových vazeb a potřeb</li>
+            </ul>
+          </article>
+
+          <article class="service-card">
+            <div class="service-icon" aria-hidden="true">
+              <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+                <path d="M18 6 6 18M6 6l12 12"/>
+                <circle cx="12" cy="12" r="10"/>
+              </svg>
+            </div>
+            <h3 class="service-title">Životní změny & krize</h3>
+            <p class="service-desc">
+              Rozchod, rozvod, ztráta blízkého člověka, nečekaná životní událost, změna zaměstnání nebo pocit, že nevíte, kudy se vydat dál.
+            </p>
+            <ul class="service-points">
+              <li>Zpracování ztráty a zármutku</li>
+              <li>Nalezení pevných bodů v nejistotě</li>
+              <li>Hledání nového životního směru a motivace</li>
+            </ul>
+          </article>
+
+          <article class="service-card">
+            <div class="service-icon" aria-hidden="true">
+              <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+                <circle cx="12" cy="12" r="10"/>
+                <path d="m4.93 4.93 4.24 4.24M14.83 9.17l4.24-4.24M14.83 14.83l4.24 4.24M9.17 14.83l-4.24 4.24"/>
+              </svg>
+            </div>
+            <h3 class="service-title">Sebepoznání & sebehodnota</h3>
+            <p class="service-desc">
+              Pocity méněcennosti, silný vnitřní kritik, pochybnosti o vlastních schopnostech a hledání odpovědi na otázku: „Kdo vlastně jsem a co opravdu chci?“
+            </p>
+            <ul class="service-points">
+              <li>Utišení přísného vnitřního kritika</li>
+              <li>Posílení zdravé sebedůvěry a laskavosti k sobě</li>
+              <li>Pochopení vlastních emocí a hodnot</li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Sekce Jak probíhá sezení -->
+    <section class="section process-section" id="jak-pracuji">
+      <div class="container">
+        <div class="section-header text-center">
+          <span class="section-tag">Průběh setkání</span>
+          <h2 class="section-title">Jak probíhá naše spolupráce</h2>
+          <p class="section-subtitle">
+            Tři jednoduché kroky k tomu, abyste se cítili jistě a věděli, co přesně můžete očekávat.
+          </p>
+        </div>
+
+        <div class="process-steps">
+          <div class="step-card">
+            <div class="step-number" aria-hidden="true">01</div>
+            <h3 class="step-title">Úvodní seznámení</h3>
+            <p class="step-desc">
+              Napíšete mi přes formulář nebo zavoláte. Domluvíme si termín prvního sezení (osobně či online). Probereme, co vás trápí a s čím potřebujete pomoci.
+            </p>
+          </div>
+
+          <div class="step-card">
+            <div class="step-number" aria-hidden="true">02</div>
+            <h3 class="step-title">Pravidelná sezení (50 min)</h3>
+            <p class="step-desc">
+              Potkáváme se v rytmu, který vám vyhovuje (zpravidla jednou za 1–2 týdny). Bezpečný prostor bez posuzování, kde postupujeme vaším vlastním tempem.
+            </p>
+          </div>
+
+          <div class="step-card">
+            <div class="step-number" aria-hidden="true">03</div>
+            <h3 class="step-title">Nové vhledy a úleva</h3>
+            <p class="step-desc">
+              Krok za krokem získáváte nadhled, osvojujete si praktické nástroje a zažíváte úlevu a větší spokojenost v každodenním životě.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Sekce Ceník -->
+    <section class="section pricing-section" id="cenik">
+      <div class="container">
+        <div class="section-header text-center">
+          <span class="section-tag">Přehledný ceník</span>
+          <h2 class="section-title">Transparentní podmínky bez překvapení</h2>
+          <p class="section-subtitle">
+            Konzultace nejsou hrazeny zdravotními pojišťovnami. Díky tomu je zaručena 100% anonymita – žádné záznamy ve zdravotnické kartě, žádná čekárna.
+          </p>
+        </div>
+
+        <div class="pricing-cards">
+          <div class="pricing-card featured">
+            <div class="pricing-badge">Nejčastější volba</div>
+            <h3 class="pricing-title">Individuální terapie</h3>
+            <p class="pricing-subtitle">Standardní sezení osobně v Praze nebo online</p>
+            <div class="pricing-amount">
+              <span class="amount-number">1 200</span>
+              <span class="amount-currency">Kč</span>
+              <span class="amount-duration">/ 50 minut</span>
+            </div>
+            <ul class="pricing-features">
+              <li>Osobní setkání v klidné pracovně v Praze</li>
+              <li>Možnost plnohodnotného online sezení (Google Meet / Zoom)</li>
+              <li>Plná diskrétnost a etická ochrana dat</li>
+              <li>Podpůrné materiály a doporučení po sezení</li>
+            </ul>
+            <a href="#kontakt" class="btn btn-primary btn-block">Domluvit termín</a>
+          </div>
+
+          <div class="pricing-card">
+            <h3 class="pricing-title">Párová konzultace</h3>
+            <p class="pricing-subtitle">Podpora partnerské komunikace a porozumění</p>
+            <div class="pricing-amount">
+              <span class="amount-number">1 800</span>
+              <span class="amount-currency">Kč</span>
+              <span class="amount-duration">/ 80 minut</span>
+            </div>
+            <ul class="pricing-features">
+              <li>Rozšířený časový prostor pro oba partnery</li>
+              <li>Neutrální, nesoudící moderování diskuse</li>
+              <li>Rozpoznání komunikačních bariér a zranění</li>
+              <li>Hledání společných dohod a nové blízkosti</li>
+            </ul>
+            <a href="#kontakt" class="btn btn-secondary btn-block">Objednat pro pár</a>
+          </div>
+        </div>
+
+        <div class="pricing-notice">
+          <p>
+            <strong>Storno podmínky:</strong> Domluvený termín můžete bezplatně zrušit nebo přesunout nejpozději 24 hodin předem. Při pozdějším zrušení je účtována plná cena sezení jako náhrada za rezervovaný čas.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Sekce Kontakt & Rezervace -->
+    <section class="section contact-section" id="kontakt">
+      <div class="container">
+        <div class="contact-grid">
+          <div class="contact-info">
+            <span class="section-tag">Kontakt</span>
+            <h2 class="section-title">Ozvěte se nezávazně</h2>
+            <p class="lead-text">
+              Udělat první krok vyžaduje odvahu. Napište mi stručně, co vás přivádí, nebo zavolejte. Obvykle odpovídám do 24 hodin v pracovní dny.
+            </p>
+
+            <div class="contact-methods">
+              <div class="contact-method-item">
+                <span class="contact-icon" aria-hidden="true">
+                  <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
+                  </svg>
+                </span>
+                <div>
+                  <span class="method-label">Telefon</span>
+                  <a href="tel:+420777123456" class="method-value">+420 777 123 456</a>
+                  <span class="method-note">Pokud nezvedám, zrovna se věnuji klientovi. Zavolám zpět.</span>
+                </div>
+              </div>
+
+              <div class="contact-method-item">
+                <span class="contact-icon" aria-hidden="true">
+                  <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <rect width="20" height="16" x="2" y="4" rx="2"/>
+                    <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/>
+                  </svg>
+                </span>
+                <div>
+                  <span class="method-label">E-mail</span>
+                  <a href="mailto:terapie@svec.cz" class="method-value">terapie@svec.cz</a>
+                  <span class="method-note">Napište mi kdykoliv, ozvu se zpět.</span>
+                </div>
+              </div>
+
+              <div class="contact-method-item">
+                <span class="contact-icon" aria-hidden="true">
+                  <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/>
+                    <circle cx="12" cy="10" r="3"/>
+                  </svg>
+                </span>
+                <div>
+                  <span class="method-label">Pracovna v Praze</span>
+                  <p class="method-value">Vinohradská 112, Praha 3</p>
+                  <span class="method-note">cca 2 minuty pěšky od stanice metra A Jiřího z Poděbrad.</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Kontaktní formulář -->
+          <div class="contact-form-card">
+            <h3 class="form-title">Napište mi zprávu</h3>
+            <p class="form-desc">Vyplňte krátký formulář a navrhnu vám nejbližší volné termíny.</p>
+
+            <form id="contact-form" class="contact-form" novalidate>
+              <div class="form-group">
+                <label for="form-name">Vaše jméno a příjmení <span class="required" aria-hidden="true">*</span></label>
+                <input 
+                  type="text" 
+                  id="form-name" 
+                  name="name" 
+                  required 
+                  autocomplete="name"
+                  placeholder="např. Jan Novák"
+                  enterkeyhint="next">
+                <span class="field-error" id="error-name" aria-live="polite"></span>
+              </div>
+
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="form-email">Váš e-mail <span class="required" aria-hidden="true">*</span></label>
+                  <input 
+                    type="email" 
+                    id="form-email" 
+                    name="email" 
+                    required 
+                    autocomplete="email"
+                    inputmode="email"
+                    placeholder="jan.novak@email.cz"
+                    enterkeyhint="next">
+                  <span class="field-error" id="error-email" aria-live="polite"></span>
+                </div>
+
+                <div class="form-group">
+                  <label for="form-phone">Telefon <span class="optional">(volitelné)</span></label>
+                  <input 
+                    type="tel" 
+                    id="form-phone" 
+                    name="phone" 
+                    autocomplete="tel"
+                    inputmode="tel"
+                    placeholder="+420 777 000 000"
+                    enterkeyhint="next">
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label for="form-type">Preferovaná forma setkání</label>
+                <div class="select-wrapper">
+                  <select id="form-type" name="session_type">
+                    <option value="osobne">Osobně v Praze (Vinohradská)</option>
+                    <option value="online">Online (Google Meet / Zoom)</option>
+                    <option value="zatim-nevim">Zatím se chci jen poradit</option>
+                  </select>
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label for="form-message">S čím přicházíte? <span class="required" aria-hidden="true">*</span></label>
+                <textarea 
+                  id="form-message" 
+                  name="message" 
+                  rows="4" 
+                  required 
+                  placeholder="Napište stručně, co vás v těchto dnech trápí nebo v jakých časech se vám sezení nejvíce hodí..."></textarea>
+                <span class="field-error" id="error-message" aria-live="polite"></span>
+              </div>
+
+              <button type="submit" class="btn btn-primary btn-block" id="form-submit-btn">
+                <span>Odeslat poptávku</span>
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                  <line x1="22" y1="2" x2="11" y2="13"/>
+                  <polygon points="22 2 15 22 11 13 2 9 22 2"/>
+                </svg>
+              </button>
+
+              <div class="form-status" id="form-status" role="alert" aria-live="assertive" hidden></div>
+
+              <p class="form-privacy-note">
+                🔒 Všechny vámi zaslané údaje jsou přísně důvěrné a slouží výhradně pro domluvu termínu sezení.
+              </p>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ / Časté dotazy -->
+    <section class="section faq-section">
+      <div class="container faq-container">
+        <div class="section-header text-center">
+          <span class="section-tag">Časté otázky</span>
+          <h2 class="section-title">Co vás nejčastěji zajímá</h2>
+        </div>
+
+        <div class="faq-list">
+          <details class="faq-item">
+            <summary class="faq-question">
+              <span>Potřebuji k návštěvě doporučení od lékaře?</span>
+              <span class="faq-chevron" aria-hidden="true">+</span>
+            </summary>
+            <div class="faq-answer">
+              <p>Ne, žádanku ani doporučení od praktického lékaře ani psychiatra nepotřebujete. Můžete se objednat přímo sami.</p>
+            </div>
+          </details>
+
+          <details class="faq-item">
+            <summary class="faq-question">
+              <span>Jak často sezení obvykle probíhají?</span>
+              <span class="faq-chevron" aria-hidden="true">+</span>
+            </summary>
+            <div class="faq-answer">
+              <p>Zpočátku se nejčastěji osvědčuje frekvence jednou za týden nebo za dva týdny, aby práce měla kontinuitu. Postupem času frekvenci upravujeme podle vašich potřeb.</p>
+            </div>
+          </details>
+
+          <details class="faq-item">
+            <summary class="faq-question">
+              <span>Jak probíhá online sezení?</span>
+              <span class="faq-chevron" aria-hidden="true">+</span>
+            </summary>
+            <div class="faq-answer">
+              <p>Předem vám zašlu odkaz na zabezpečený hovor (Google Meet nebo Zoom). Stačí kliknout z počítače nebo telefonu. Doporučuji zajistit si klidnou místnost, kde nebudete po dobu 50 minut rušeni.</p>
+            </div>
+          </details>
+
+          <details class="faq-item">
+            <summary class="faq-question">
+              <span>Je zaručena mlčenlivost?</span>
+              <span class="faq-chevron" aria-hidden="true">+</span>
+            </summary>
+            <div class="faq-answer">
+              <p>Ano, striktní mlčenlivost je základním pilířem terapeutické práce a etického kodexu. Vše, co zazní, zůstává výhradně mezi námi.</p>
+            </div>
+          </details>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Patička -->
+  <footer class="site-footer">
+    <div class="container footer-container">
+      <div class="footer-crisis-box">
+        <p class="crisis-title">
+          <span class="crisis-icon" aria-hidden="true">ℹ️</span>
+          <strong>Akutní pomoc v krizi:</strong>
+        </p>
+        <p class="crisis-desc">
+          Pokud jste v akutním ohrožení života nebo v nesnesitelné nouzi, nečekejte na termín a kontaktujte prosím nonstop bezplatnou <strong>Linku první psychické pomoci: <a href="tel:116123">116 123</a></strong> nebo záchrannou službu na čísle <strong>155</strong>.
+        </p>
+      </div>
+
+      <div class="footer-bottom">
+        <div class="footer-brand">
+          <strong>Mgr. František Švec</strong>
+          <span>Terapeutické služby & psychologické poradenství</span>
+        </div>
+        <p class="footer-copy">
+          &copy; <span id="current-year">2026</span> Mgr. František Švec. Všechna práva vyhrazena.
+        </p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
