@@ -13,7 +13,7 @@ Web je koncipován jako kompaktní **one-page landing page** s těmito sekcemi:
 1. **Hlavička (Header)** – Logo, přehledná navigace a rychlé tlačítko pro objednání.
 2. **Hero sekce** – Důvěryhodný úvod s hlavní myšlenkou, garancemi bezpečí/diskrétnosti a CTA tlačítky.
 3. **O mně** – Představení osobního a empatického přístupu, kvalifikace, etického kodexu a supervize.
-4. **Nabízené služby** – 1. Walk and Talk Therapy v Brně (terapie v chůzi a zeleni) a 2. Online terapie (videohovory odkudkoliv), včetně přehledu řešených témat.
+4. **Nabízené služby** – Walk and Talk Therapy v Brně (terapie v chůzi a zeleni) a Online terapie (videohovory odkudkoliv), včetně přehledu řešených témat.
 5. **Průběh spolupráce** – 3 jasné kroky: od prvního kontaktu přes samotné sezení až po úlevu a nové vhledy.
 6. **Ceník** – Transparentní ceny pro obě formy sezení (Walk & Talk i Online) včetně storno podmínek.
 7. **Kontakt & Objednání** – Přímé kontakty (telefon, e-mail, lokality v Brně) a interaktivní poptávkový formulář.
