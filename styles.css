@@ -1,44 +1,53 @@
 /* ==========================================================================
    Terapeutické služby - Filip Švec
-   Kompletní Nordic Slate & Warm Cream Design
-   Vychází přímo z referenční palety: #536C7C, #7B949C, #FFF5D9
+   Kompletní design dle palety Sabrina_07
+   Referenční barvy: #A60321, #F2E9D8, #8C5C32, #D9A577, #D97B66
    ========================================================================== */
 
 /* 1. CSS Custom Properties */
 :root {
-  /* Klíčová referenční paleta */
-  --color-primary: #536C7C;          /* Muted Slate Petrol z reference */
-  --color-primary-dark: #3A4F5C;     /* Hlubší tón břidlice */
-  --color-primary-deep: #25343D;     /* Nejhlubší kontrastní břidlice */
-  --color-primary-hover: #485F6E;
+  /* Klíčová referenční paleta (Sabrina_07) */
+  --color-primary: #8C5C32;          /* Saddle Brown ze vzorníku */
+  --color-primary-dark: #6D4321;     /* Hlubší teplá hnědá */
+  --color-primary-deep: #2A170D;     /* Nejhlubší kontrastní ebenově hnědá */
+  --color-primary-hover: #7D512B;
   
-  --color-secondary: #7B949C;        /* Světlejší břidlicový tón ze vzorníku */
-  --color-secondary-light: #9BB2BA;
-  --color-secondary-subtle: rgba(123, 148, 156, 0.22);
-  --color-secondary-border: rgba(123, 148, 156, 0.38);
+  --color-crimson: #A60321;          /* Výrazná karmínová červeň ze vzorníku */
+  --color-crimson-hover: #C4052A;
+  --color-crimson-subtle: rgba(166, 3, 33, 0.22);
+  --color-crimson-border: rgba(166, 3, 33, 0.45);
 
-  --color-cream: #FFF5D9;            /* Teplá máslová smetana z reference */
-  --color-cream-hover: #FFF9E8;
-  --color-cream-muted: #EFE4C4;
-  --color-cream-border: rgba(255, 245, 217, 0.35);
+  --color-secondary: #D9A577;        /* Jantarový teplý písek ze vzorníku */
+  --color-secondary-light: #E5B78E;
+  --color-secondary-subtle: rgba(217, 165, 119, 0.2);
+  --color-secondary-border: rgba(217, 165, 119, 0.38);
+
+  --color-terracotta: #D97B66;       /* Cihlový korál ze vzorníku */
+  --color-terracotta-subtle: rgba(217, 123, 102, 0.22);
+  --color-terracotta-border: rgba(217, 123, 102, 0.42);
+
+  --color-cream: #F2E9D8;            /* Alabastrová teplá smetana ze vzorníku */
+  --color-cream-hover: #FAF4E8;
+  --color-cream-muted: #E2D6C0;
+  --color-cream-border: rgba(242, 233, 216, 0.35);
 
   /* Základní barvy celé stránky */
-  --color-bg: #4A6372;               /* Celé tělo stránky v uklidňující břidlicové */
-  --color-bg-alt: #415764;           /* Alternující jemně odlišené sekce */
+  --color-bg: #4F321E;               /* Bohatý zemitý hnědý tón odpovídající paletě */
+  --color-bg-alt: #442917;           /* Alternující hlubší sekce */
   
-  /* Karty a povrchy - elegantní tmavá břidlice */
-  --color-card-bg: rgba(43, 61, 71, 0.72);
-  --color-card-bg-hover: rgba(51, 72, 84, 0.85);
-  --color-card-border: rgba(123, 148, 156, 0.35);
+  /* Karty a povrchy */
+  --color-card-bg: rgba(48, 28, 16, 0.76);
+  --color-card-bg-hover: rgba(62, 36, 20, 0.88);
+  --color-card-border: rgba(217, 165, 119, 0.32);
   
-  /* Textové barvy na břidlicovém podkladu */
-  --color-text-title: #FFF5D9;       /* Všechny nadpisy v krémové z reference */
-  --color-text-main: #FFFFFF;        /* Čistý bílý text pro maximální čitelnost */
-  --color-text-muted: #D3DFE5;       /* Zjemněný text popisů */
-  --color-text-dim: #A8BAC2;         /* Doplňkový tlumený text */
+  /* Textové barvy na teplém podkladu */
+  --color-text-title: #F2E9D8;       /* Všechny nadpisy v alabastrové krémové */
+  --color-text-main: #FFFFFF;        /* Čistý bílý text pro špičkovou čitelnost */
+  --color-text-muted: #EAD9CA;       /* Zjemněný teplý pískový text */
+  --color-text-dim: #D9A577;         /* Doplňkový tlumený text v teplém písku */
 
   --color-success: #7AD19D;
-  --color-error: #FF8E82;
+  --color-error: #FF6B5E;
 
   /* Typografie - Fraunces pro nadpisy, Plus Jakarta Sans pro text */
   --font-heading: 'Fraunces', Georgia, serif;
@@ -72,10 +81,10 @@
   --radius-lg: 24px;
   --radius-full: 9999px;
 
-  /* Hloubka stínů */
-  --shadow-sm: 0 4px 12px rgba(18, 28, 34, 0.18);
-  --shadow-md: 0 10px 28px rgba(18, 28, 34, 0.25), 0 2px 8px rgba(18, 28, 34, 0.15);
-  --shadow-lg: 0 18px 45px rgba(14, 23, 28, 0.35), 0 4px 14px rgba(14, 23, 28, 0.2);
+  /* Hloubka stínů - teplé odstíny */
+  --shadow-sm: 0 4px 12px rgba(22, 12, 6, 0.22);
+  --shadow-md: 0 10px 28px rgba(22, 12, 6, 0.32), 0 2px 8px rgba(22, 12, 6, 0.2);
+  --shadow-lg: 0 18px 45px rgba(18, 9, 4, 0.45), 0 4px 14px rgba(18, 9, 4, 0.28);
 
   --transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
 }
@@ -100,8 +109,8 @@ body {
   color: var(--color-text-main);
   background-color: var(--color-bg);
   background-image: 
-    radial-gradient(circle at 10% 15%, rgba(123, 148, 156, 0.18) 0%, transparent 45%),
-    radial-gradient(circle at 90% 85%, rgba(37, 52, 61, 0.45) 0%, transparent 50%);
+    radial-gradient(circle at 10% 15%, rgba(217, 165, 119, 0.2) 0%, transparent 45%),
+    radial-gradient(circle at 90% 85%, rgba(166, 3, 33, 0.25) 0%, transparent 50%);
   background-attachment: fixed;
   overflow-x: hidden;
 }
@@ -158,7 +167,7 @@ a {
 }
 
 a:hover {
-  color: #ffffff;
+  color: var(--color-secondary-light);
   text-decoration: underline;
 }
 
@@ -182,28 +191,29 @@ a:hover {
 }
 
 .btn-primary {
-  background-color: var(--color-cream);
-  color: var(--color-primary-deep) !important;
-  border-color: var(--color-cream);
-  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.22);
+  background-color: var(--color-crimson);
+  color: var(--color-cream) !important;
+  border-color: var(--color-crimson);
+  box-shadow: 0 4px 18px rgba(166, 3, 33, 0.38);
 }
 
 .btn-primary:hover {
-  background-color: var(--color-cream-hover);
-  color: var(--color-primary-deep) !important;
+  background-color: var(--color-crimson-hover);
+  border-color: var(--color-crimson-hover);
+  color: #ffffff !important;
   transform: translateY(-2px);
-  box-shadow: 0 6px 24px rgba(255, 245, 217, 0.3);
+  box-shadow: 0 6px 24px rgba(166, 3, 33, 0.52);
   text-decoration: none;
 }
 
 .btn-secondary {
   background-color: transparent;
   color: var(--color-cream) !important;
-  border-color: var(--color-cream-border);
+  border-color: var(--color-secondary-border);
 }
 
 .btn-secondary:hover {
-  background-color: rgba(255, 245, 217, 0.12);
+  background-color: rgba(217, 165, 119, 0.15);
   border-color: var(--color-cream);
   color: var(--color-cream) !important;
   transform: translateY(-2px);
@@ -220,16 +230,16 @@ a:hover {
   top: 0;
   z-index: 1000;
   height: var(--header-height);
-  background-color: rgba(65, 87, 100, 0.94);
+  background-color: rgba(68, 41, 23, 0.94);
   backdrop-filter: blur(14px);
   -webkit-backdrop-filter: blur(14px);
-  border-block-end: 1px solid rgba(123, 148, 156, 0.35);
+  border-block-end: 1px solid rgba(217, 165, 119, 0.28);
   transition: var(--transition);
 }
 
 .site-header.scrolled {
-  background-color: rgba(43, 61, 71, 0.98);
-  box-shadow: 0 6px 24px rgba(18, 28, 34, 0.3);
+  background-color: rgba(46, 26, 14, 0.98);
+  box-shadow: 0 6px 24px rgba(20, 11, 6, 0.38);
 }
 
 .header-container {
@@ -257,10 +267,10 @@ a:hover {
   justify-content: center;
   width: 44px;
   height: 44px;
-  background-color: rgba(255, 245, 217, 0.12);
+  background-color: rgba(217, 165, 119, 0.15);
   color: var(--color-cream);
   border-radius: var(--radius-md);
-  border: 1px solid rgba(255, 245, 217, 0.25);
+  border: 1px solid var(--color-secondary-border);
 }
 
 .brand-text {
@@ -307,16 +317,17 @@ a:hover {
 }
 
 .nav-link-cta {
-  background-color: var(--color-cream);
-  color: var(--color-primary-deep) !important;
+  background-color: var(--color-crimson);
+  color: var(--color-cream) !important;
   padding: 0.6rem 1.35rem;
   border-radius: var(--radius-full);
   font-weight: 700;
-  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 4px 14px rgba(166, 3, 33, 0.35);
 }
 
 .nav-link-cta:hover {
-  background-color: var(--color-cream-hover);
+  background-color: var(--color-crimson-hover);
+  color: #ffffff !important;
   transform: translateY(-1px);
   text-decoration: none;
 }
@@ -361,9 +372,9 @@ a:hover {
   display: inline-flex;
   align-items: center;
   gap: 0.5rem;
-  background-color: rgba(123, 148, 156, 0.25);
+  background-color: rgba(166, 3, 33, 0.22);
   color: var(--color-cream);
-  border: 1px solid var(--color-secondary-border);
+  border: 1px solid var(--color-crimson-border);
   padding: 0.45rem 1.1rem;
   border-radius: var(--radius-full);
   font-size: 0.88rem;
@@ -375,7 +386,7 @@ a:hover {
 .badge-dot {
   width: 8px;
   height: 8px;
-  background-color: var(--color-cream);
+  background-color: var(--color-terracotta);
   border-radius: 50%;
   flex-shrink: 0;
 }
@@ -423,7 +434,7 @@ a:hover {
   gap: 0.6rem;
   font-size: 0.92rem;
   color: var(--color-text-main);
-  background: rgba(43, 61, 71, 0.6);
+  background: rgba(48, 28, 16, 0.65);
   padding: 0.5rem 1rem;
   border-radius: var(--radius-full);
   border: 1px solid var(--color-card-border);
@@ -433,7 +444,7 @@ a:hover {
 .highlight-icon {
   display: flex;
   align-items: center;
-  color: var(--color-cream);
+  color: var(--color-secondary);
 }
 
 /* Karta s citátem v Hero sekci */
@@ -452,8 +463,8 @@ a:hover {
   font-family: var(--font-heading);
   font-size: 5.5rem;
   line-height: 0.8;
-  color: var(--color-cream);
-  opacity: 0.45;
+  color: var(--color-secondary);
+  opacity: 0.35;
   margin-block-end: 0.5rem;
   user-select: none;
 }
@@ -543,7 +554,7 @@ a:hover {
   width: 100%;
   aspect-ratio: 4/5;
   border-radius: var(--radius-lg);
-  background: linear-gradient(150deg, #374A55 0%, #25343D 100%);
+  background: linear-gradient(150deg, #583720 0%, #2A170D 100%);
   color: #ffffff;
   display: flex;
   flex-direction: column;
@@ -604,7 +615,7 @@ a:hover {
   width: 28px;
   height: 28px;
   border-radius: 50%;
-  background-color: rgba(255, 245, 217, 0.15);
+  background-color: rgba(217, 165, 119, 0.2);
   color: var(--color-cream);
   font-weight: 700;
   font-size: 0.9rem;
@@ -656,13 +667,13 @@ a:hover {
 }
 
 .featured-service {
-  border-color: rgba(255, 245, 217, 0.3);
+  border-color: rgba(217, 165, 119, 0.4);
 }
 
 .service-card:hover {
   transform: translateY(-4px);
   background-color: var(--color-card-bg-hover);
-  border-color: var(--color-cream);
+  border-color: var(--color-secondary);
   box-shadow: var(--shadow-lg);
 }
 
@@ -670,9 +681,9 @@ a:hover {
   position: absolute;
   top: 1.5rem;
   right: 1.6rem;
-  background-color: rgba(255, 245, 217, 0.15);
+  background-color: rgba(166, 3, 33, 0.28);
   color: var(--color-cream);
-  border: 1px solid var(--color-cream-border);
+  border: 1px solid var(--color-crimson-border);
   font-size: 0.76rem;
   font-weight: 700;
   text-transform: uppercase;
@@ -682,8 +693,9 @@ a:hover {
 }
 
 .service-badge-alt {
-  background-color: rgba(123, 148, 156, 0.25);
-  border-color: var(--color-secondary-border);
+  background-color: rgba(217, 123, 102, 0.25);
+  border-color: var(--color-terracotta-border);
+  color: var(--color-cream);
 }
 
 .service-icon {
@@ -693,9 +705,9 @@ a:hover {
   align-items: center;
   justify-content: center;
   border-radius: var(--radius-md);
-  background-color: rgba(255, 245, 217, 0.12);
+  background-color: rgba(217, 165, 119, 0.16);
   color: var(--color-cream);
-  border: 1px solid var(--color-cream-border);
+  border: 1px solid var(--color-secondary-border);
   margin-block-end: 1.4rem;
 }
 
@@ -738,7 +750,7 @@ a:hover {
 
 .service-points li::before {
   content: "• ";
-  color: var(--color-cream);
+  color: var(--color-secondary);
   font-weight: bold;
 }
 
@@ -777,7 +789,7 @@ a:hover {
 }
 
 .topic-item {
-  background: rgba(37, 52, 61, 0.7);
+  background: rgba(42, 24, 14, 0.75);
   padding: 1.2rem 1.4rem;
   border-radius: var(--radius-md);
   border: 1px solid var(--color-card-border);
@@ -823,8 +835,8 @@ a:hover {
   font-size: 3.4rem;
   line-height: 1;
   font-weight: 700;
-  color: var(--color-cream);
-  opacity: 0.65;
+  color: var(--color-secondary);
+  opacity: 0.75;
   margin-block-end: 0.8rem;
 }
 
@@ -866,7 +878,7 @@ a:hover {
 }
 
 .pricing-card.featured {
-  border-color: var(--color-cream);
+  border-color: var(--color-secondary);
   border-width: 2px;
   box-shadow: var(--shadow-lg);
 }
@@ -875,14 +887,15 @@ a:hover {
   position: absolute;
   top: -12px;
   right: 2rem;
-  background-color: var(--color-cream);
-  color: var(--color-primary-deep);
+  background-color: var(--color-crimson);
+  color: var(--color-cream);
   font-size: 0.75rem;
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 0.08em;
   padding: 0.35rem 0.95rem;
   border-radius: var(--radius-full);
+  box-shadow: 0 2px 10px rgba(166, 3, 33, 0.4);
 }
 
 .pricing-title {
@@ -945,7 +958,7 @@ a:hover {
   content: "✓";
   position: absolute;
   left: 0;
-  color: var(--color-cream);
+  color: var(--color-secondary);
   font-weight: bold;
 }
 
@@ -998,9 +1011,9 @@ a:hover {
   width: 48px;
   height: 48px;
   border-radius: var(--radius-md);
-  background-color: rgba(255, 245, 217, 0.12);
+  background-color: rgba(217, 165, 119, 0.16);
   color: var(--color-cream);
-  border: 1px solid var(--color-cream-border);
+  border: 1px solid var(--color-secondary-border);
   flex-shrink: 0;
 }
 
@@ -1084,8 +1097,8 @@ input, select, textarea {
   font-size: 1rem;
   padding: 0.85rem 1.1rem;
   min-height: 48px;
-  background-color: rgba(30, 44, 52, 0.8);
-  border: 1.5px solid var(--color-card-border);
+  background-color: rgba(36, 21, 12, 0.85);
+  border: 1.5px solid var(--color-secondary-border);
   border-radius: var(--radius-sm);
   color: #ffffff;
   transition: var(--transition);
@@ -1096,7 +1109,7 @@ select {
 }
 
 select option {
-  background-color: #2D3E48;
+  background-color: #362112;
   color: #ffffff;
 }
 
@@ -1107,13 +1120,13 @@ textarea {
 }
 
 input::placeholder, textarea::placeholder {
-  color: #8C9FA8;
+  color: #B59B88;
 }
 
 input:focus, select:focus, textarea:focus {
   outline: none;
-  border-color: var(--color-cream);
-  box-shadow: 0 0 0 3px rgba(255, 245, 217, 0.2);
+  border-color: var(--color-secondary);
+  box-shadow: 0 0 0 3px rgba(217, 165, 119, 0.25);
 }
 
 input:user-invalid, textarea:user-invalid {
@@ -1181,7 +1194,7 @@ input:user-valid:not(:placeholder-shown), textarea:user-valid:not(:placeholder-s
 }
 
 .faq-item[open] {
-  border-color: var(--color-cream);
+  border-color: var(--color-secondary);
   box-shadow: var(--shadow-sm);
 }
 
@@ -1226,12 +1239,12 @@ input:user-valid:not(:placeholder-shown), textarea:user-valid:not(:placeholder-s
   background-color: var(--color-primary-deep);
   color: var(--color-text-muted);
   padding-block: 4.5rem 2.5rem;
-  border-block-start: 1px solid var(--color-card-border);
+  border-block-start: 1px solid rgba(217, 165, 119, 0.2);
 }
 
 .footer-crisis-box {
-  background-color: rgba(255, 245, 217, 0.08);
-  border: 1px solid var(--color-cream-border);
+  background-color: rgba(166, 3, 33, 0.12);
+  border: 1px solid rgba(166, 3, 33, 0.35);
   border-radius: var(--radius-md);
   padding: 1.4rem 1.8rem;
   margin-block-end: 3rem;
@@ -1264,7 +1277,7 @@ input:user-valid:not(:placeholder-shown), textarea:user-valid:not(:placeholder-s
   justify-content: space-between;
   flex-wrap: wrap;
   gap: 1.5rem;
-  border-block-start: 1px solid rgba(123, 148, 156, 0.2);
+  border-block-start: 1px solid rgba(217, 165, 119, 0.2);
   padding-block-start: 2rem;
 }
 
@@ -1291,8 +1304,8 @@ input:user-valid:not(:placeholder-shown), textarea:user-valid:not(:placeholder-s
 
 /* 11. Signal & Krypto komponenty */
 .signal-banner {
-  background: linear-gradient(145deg, rgba(53, 76, 90, 0.95) 0%, rgba(35, 52, 63, 0.98) 100%);
-  border: 1.5px solid var(--color-cream);
+  background: linear-gradient(145deg, rgba(72, 38, 22, 0.95) 0%, rgba(42, 20, 12, 0.98) 100%);
+  border: 1.5px solid var(--color-secondary);
   border-radius: var(--radius-lg);
   padding: 2rem 2.2rem;
   margin-block-end: 2.2rem;
@@ -1309,7 +1322,7 @@ input:user-valid:not(:placeholder-shown), textarea:user-valid:not(:placeholder-s
   width: 140px;
   height: 140px;
   border-radius: 50%;
-  background: radial-gradient(circle, rgba(255, 245, 217, 0.12) 0%, transparent 70%);
+  background: radial-gradient(circle, rgba(217, 165, 119, 0.18) 0%, transparent 70%);
   pointer-events: none;
 }
 
@@ -1317,8 +1330,8 @@ input:user-valid:not(:placeholder-shown), textarea:user-valid:not(:placeholder-s
   display: inline-flex;
   align-items: center;
   gap: 0.4rem;
-  background-color: var(--color-cream);
-  color: var(--color-primary-deep);
+  background-color: var(--color-crimson);
+  color: var(--color-cream);
   font-size: 0.78rem;
   font-weight: 800;
   text-transform: uppercase;
@@ -1401,7 +1414,7 @@ input:user-valid:not(:placeholder-shown), textarea:user-valid:not(:placeholder-s
   display: flex;
   align-items: flex-start;
   gap: 1.1rem;
-  background: rgba(30, 44, 52, 0.75);
+  background: rgba(36, 21, 12, 0.75);
   border: 1px solid var(--color-secondary-border);
   border-radius: var(--radius-md);
   padding: 1.25rem 1.3rem;
@@ -1409,8 +1422,8 @@ input:user-valid:not(:placeholder-shown), textarea:user-valid:not(:placeholder-s
 }
 
 .payment-method-card:hover {
-  background: rgba(43, 61, 71, 0.95);
-  border-color: var(--color-cream-border);
+  background: rgba(56, 34, 19, 0.95);
+  border-color: var(--color-secondary);
   transform: translateY(-2px);
   box-shadow: var(--shadow-sm);
 }
@@ -1422,7 +1435,7 @@ input:user-valid:not(:placeholder-shown), textarea:user-valid:not(:placeholder-s
   width: 44px;
   height: 44px;
   border-radius: 12px;
-  background: rgba(30, 44, 52, 0.9);
+  background: rgba(36, 21, 12, 0.95);
   border: 1px solid var(--color-secondary-border);
   flex-shrink: 0;
   overflow: hidden;
@@ -1446,8 +1459,8 @@ input:user-valid:not(:placeholder-shown), textarea:user-valid:not(:placeholder-s
   width: 22px;
   height: 22px;
   display: block;
-  color: var(--color-cream);
-  stroke: var(--color-cream);
+  color: var(--color-secondary);
+  stroke: var(--color-secondary);
   transition: transform 0.25s ease;
 }
 
@@ -1484,14 +1497,14 @@ input:user-valid:not(:placeholder-shown), textarea:user-valid:not(:placeholder-s
   letter-spacing: 0.05em;
   padding: 0.2rem 0.6rem;
   border-radius: var(--radius-full);
-  background: var(--color-cream);
+  background: var(--color-secondary);
   color: var(--color-primary-deep);
 }
 
 .payment-tag-anon {
-  background: rgba(255, 245, 217, 0.15);
+  background: rgba(166, 3, 33, 0.25);
   color: var(--color-cream);
-  border: 1px solid var(--color-cream-border);
+  border: 1px solid var(--color-crimson-border);
 }
 
 .payment-method-detail {
@@ -1534,7 +1547,7 @@ input:user-valid:not(:placeholder-shown), textarea:user-valid:not(:placeholder-s
   }
 
   .site-header {
-    background-color: rgba(43, 61, 71, 0.98);
+    background-color: rgba(46, 26, 14, 0.98);
   }
 
   .menu-toggle {
@@ -1546,7 +1559,7 @@ input:user-valid:not(:placeholder-shown), textarea:user-valid:not(:placeholder-s
     top: var(--header-height);
     left: 0;
     right: 0;
-    background-color: #2F414D;
+    background-color: #362012;
     border-block-end: 1px solid var(--color-card-border);
     padding: 1.5rem;
     box-shadow: var(--shadow-lg);
