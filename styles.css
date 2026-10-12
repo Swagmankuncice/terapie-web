@@ -1580,6 +1580,10 @@ input:user-valid:not(:placeholder-shown), textarea:user-valid:not(:placeholder-s
     grid-template-columns: 1fr;
   }
 
+  .badge-pill {
+    display: none;
+  }
+
   .hero-actions {
     flex-direction: column;
     width: 100%;
