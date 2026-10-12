@@ -1508,10 +1508,6 @@ input:user-valid:not(:placeholder-shown), textarea:user-valid:not(:placeholder-s
     gap: 2.5rem;
   }
 
-  .hero-visual {
-    order: -1;
-  }
-
   .about-grid {
     grid-template-columns: 1fr;
     gap: 2.5rem;
