@@ -849,6 +849,10 @@ a:hover {
   margin-block-end: 2rem;
 }
 
+.pricing-section .section-title {
+  margin-block-end: 0;
+}
+
 .pricing-list {
   max-width: 580px;
   margin-inline: auto;
