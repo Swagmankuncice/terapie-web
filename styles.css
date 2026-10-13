@@ -351,10 +351,8 @@ a:hover {
 }
 
 .hero-container {
-  display: grid;
-  grid-template-columns: 1.2fr 0.8fr;
-  align-items: center;
-  gap: 3.5rem;
+  display: block;
+  max-width: 820px;
 }
 
 .badge-pill {
@@ -395,7 +393,7 @@ a:hover {
   color: var(--color-text-main);
   line-height: 1.72;
   margin-block-end: 2.4rem;
-  max-width: 580px;
+  max-width: 720px;
 }
 
 .hero-description strong {
@@ -1471,11 +1469,6 @@ input:user-valid:not(:placeholder-shown), textarea:user-valid:not(:placeholder-s
 
 /* 12. Responzivní přizpůsobení */
 @media (max-width: 960px) {
-  .hero-container {
-    grid-template-columns: 1fr;
-    gap: 2.5rem;
-  }
-
   .about-grid {
     grid-template-columns: 1fr;
     gap: 2.5rem;
