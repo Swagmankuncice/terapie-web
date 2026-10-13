@@ -846,11 +846,11 @@ a:hover {
 }
 
 .pricing-section .section-header {
-  margin-block-end: 2rem;
+  margin-block-end: 2.2rem;
 }
 
 .pricing-section .section-title {
-  margin-block-end: 0;
+  margin-block-end: 0.75rem;
 }
 
 .pricing-list {
