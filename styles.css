@@ -483,13 +483,20 @@ a:hover {
   }
 }
 
-.visual-quote {
+.visual-heading {
   font-family: var(--font-heading);
-  font-size: 1.45rem;
-  font-style: italic;
-  line-height: 1.45;
+  font-size: 1.65rem;
+  font-weight: 700;
+  line-height: 1.25;
   color: var(--color-cream);
-  margin-block-end: 1.8rem;
+  margin-block-end: 0.8rem;
+}
+
+.visual-desc {
+  font-size: 0.98rem;
+  color: var(--color-text-muted);
+  line-height: 1.6;
+  margin-block-end: 1.6rem;
 }
 
 .visual-meta {
