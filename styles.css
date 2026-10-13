@@ -404,7 +404,42 @@ a:hover {
   display: flex;
   flex-wrap: wrap;
   gap: 1.1rem;
-  margin-block-end: 0;
+  margin-block-end: 1.35rem;
+}
+
+.hero-status {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  font-size: 0.88rem;
+  font-weight: 500;
+  color: var(--color-cream);
+  background: rgba(123, 148, 156, 0.2);
+  border: 1px solid var(--color-secondary-border);
+  padding: 0.42rem 1rem;
+  border-radius: var(--radius-full);
+  width: fit-content;
+}
+
+.status-dot {
+  width: 8px;
+  height: 8px;
+  background-color: #48bb78;
+  border-radius: 50%;
+  box-shadow: 0 0 8px rgba(72, 187, 120, 0.85);
+  animation: pulse-dot 2s infinite ease-in-out;
+  flex-shrink: 0;
+}
+
+@keyframes pulse-dot {
+  0%, 100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.45;
+    transform: scale(0.85);
+  }
 }
 
 
